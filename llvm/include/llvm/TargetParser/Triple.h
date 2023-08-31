@@ -56,7 +56,7 @@ public:
     bpfel,          // eBPF or extended BPF or 64-bit BPF (little endian)
     bpfeb,          // eBPF or extended BPF or 64-bit BPF (big endian)
     csky,           // CSKY: csky
-    delendum,       // Delendum: 32-bit
+    valida,         // Valida: 32-bit
     dxil,           // DXIL 32-bit DirectX bytecode
     hexagon,        // Hexagon: hexagon
     loongarch32,    // LoongArch (32-bit): loongarch32

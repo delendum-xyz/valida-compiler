@@ -1,14 +1,14 @@
 # Valida Compiler
 
 ### Overview
-This repository contains the compiler for the [Valida zkVM](https://github.com/delendum-xyz/Valida), a STARK-based VM designed to efficiently prove the execution of programs written in conventional languages. A work-in-progress spec for the VM ISA is described in the GitHub issue [here](https://github.com/delendum-xyz/valida-compiler/issues/2). The code implementing the compiler can be found in the `llvm/lib/Target/Delendum` directory.
+This repository contains the compiler for the [Valida zkVM](https://github.com/valida-xyz/valida), a STARK-based VM designed to efficiently prove the execution of programs written in conventional languages. A work-in-progress spec for the VM ISA is described in the GitHub issue [here](https://github.com/valida-xyz/valida-compiler/issues/2). The code implementing the compiler can be found in the `llvm/lib/Target/Valida` directory.
 
 ### Building the compiler
 These are the steps to build the Valida backend compiler (`llc`), which translates LLVM IR to Valida Assembly:
 
 1. `mkdir build`
 2. `cd build`
-3. `cmake -G "Ninja" -DLLVM_TARGETS_TO_BUILD="" -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD="Delendum" ../llvm`
+3. `cmake -G "Ninja" -DLLVM_TARGETS_TO_BUILD="" -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD="Valida" ../llvm`
 4. `ninja llc`
 
 ### Compilation example
@@ -42,7 +42,7 @@ int main() {
 
 2. Generate the assembly:
 
-`./build/bin/llc fib.ll --march=delendum --global-isel`
+`./build/bin/llc fib.ll --march=valida --global-isel`
 
 ```asm
 ; fib.s
